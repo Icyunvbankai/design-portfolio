@@ -7,7 +7,7 @@
 <meta name="description" content="Original streetwear t-shirt graphics for clothing brands. Character art, tour merch, comic-cover statements, anime & manga styles. Order on Fiverr.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Epilogue:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Epilogue:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,10 +28,10 @@
 
   <!-- HERO -->
   <section class="hero">
-    <p class="eyebrow">Fiverr portfolio — @mr_clyburn</p>
-    <h1>BOLD STREETWEAR<br>GRAPHICS FOR BRANDS<br>THAT <span class="accent">REFUSE</span> TO<br>BLEND IN.</h1>
-    <p class="lede">Original t-shirt art drawn from scratch for your clothing brand. No templates. No clip art. No recycled designs — every piece is one of one, delivered print-ready.</p>
-    <div class="hero-cta">
+    <p class="eyebrow rv">[ FIVERR PORTFOLIO — @MR_CLYBURN ]</p>
+    <h1 id="heroTitle">BOLD STREETWEAR<br>GRAPHICS <span class="hchip" aria-hidden="true"><img id="hchipImg" src="assets/twisted-figure.jpg" alt=""></span><br>FOR BRANDS THAT <span class="accent">REFUSE</span> TO<br>BLEND IN.</h1>
+    <p class="lede rv" style="--d:120ms">Original t-shirt art drawn from scratch for your clothing brand. No templates. No clip art. No recycled designs — every piece is one of one, delivered print-ready.</p>
+    <div class="hero-cta rv" style="--d:220ms">
       <a class="btn btn-accent btn-lg" href="https://www.fiverr.com/mr_clyburn" target="_blank" rel="noopener">Order on Fiverr</a>
       <a class="btn btn-ghost btn-lg" href="#work">See the work ↓</a>
     </div>
@@ -53,9 +53,11 @@
   </div>
 
   <!-- WORK -->
-  <section id="work" class="section">
-    <p class="eyebrow">Selected work</p>
-    <h2>PIECES THAT <span class="accent">SELL</span> THE BRAND.</h2>
+  <section id="work" class="section section-bleed">
+    <div class="wrap-narrow">
+      <p class="eyebrow rv">[ SELECTED WORK ]</p>
+      <h2 class="kinetic-h">PIECES THAT <span class="accent">SELL</span> THE BRAND.</h2>
+    </div>
     <div class="grid work-grid">
       <figure class="card work-card" data-full="assets/twisted-figure.jpg">
         <img src="assets/twisted-figure.jpg" alt="Twisted collectible-style character art" loading="lazy">
@@ -87,8 +89,8 @@
 
   <!-- SERVICES -->
   <section id="services" class="section">
-    <p class="eyebrow">Available services</p>
-    <h2>WHAT YOU CAN <span class="accent">ORDER</span> RIGHT NOW.</h2>
+    <p class="eyebrow rv">[ AVAILABLE SERVICES ]</p>
+    <h2 class="kinetic-h">WHAT YOU CAN <span class="accent">ORDER</span> RIGHT NOW.</h2>
     <div class="grid services-grid">
 
       <article class="card service-card live">
@@ -125,8 +127,8 @@
 
   <!-- PROCESS -->
   <section class="section">
-    <p class="eyebrow">How it works</p>
-    <h2>FROM BRIEF TO <span class="accent">PRINT-READY</span>.</h2>
+    <p class="eyebrow rv">[ HOW IT WORKS ]</p>
+    <h2 class="kinetic-h">FROM BRIEF TO <span class="accent">PRINT-READY</span>.</h2>
     <div class="grid process-grid">
       <div class="card step"><p class="step-n">01</p><h3>Brief</h3><p>Tell me your brand, vibe, and references. The more direction, the sharper the result.</p></div>
       <div class="card step"><p class="step-n">02</p><h3>Concepts</h3><p>I sketch original directions built around your brand — never templates.</p></div>
@@ -137,8 +139,8 @@
 
   <!-- PRICING -->
   <section id="pricing" class="section">
-    <p class="eyebrow">Packages</p>
-    <h2>PICK YOUR <span class="accent">WEAPON</span>.</h2>
+    <p class="eyebrow rv">[ PACKAGES ]</p>
+    <h2 class="kinetic-h">PICK YOUR <span class="accent">WEAPON</span>.</h2>
     <div class="grid pricing-grid">
       <div class="card price-card">
         <h3>BASIC</h3><p class="price">$25</p>
@@ -162,8 +164,8 @@
 
   <!-- FAQ -->
   <section id="faq" class="section">
-    <p class="eyebrow">FAQ</p>
-    <h2>QUICK <span class="accent">ANSWERS</span>.</h2>
+    <p class="eyebrow rv">[ FAQ ]</p>
+    <h2 class="kinetic-h">QUICK <span class="accent">ANSWERS</span>.</h2>
     <div class="faq-list">
       <details class="card"><summary>Is the artwork really original?</summary><p>Yes. Every piece is drawn from scratch for your brand. No templates, no clip art, no recycled designs.</p></details>
       <details class="card"><summary>What files do I get?</summary><p>High-resolution print-ready PNGs (plus source files on Standard and up), sized for apparel printing.</p></details>
@@ -183,6 +185,7 @@
 </main>
 
 <footer>
+  <div class="foot-word" id="footWord" aria-hidden="true">MR CLYBURN</div>
   <p>© 2026 MR CLYBURN — Bold streetwear graphics. <a href="https://www.fiverr.com/mr_clyburn" target="_blank" rel="noopener">Fiverr profile</a></p>
 </footer>
 
