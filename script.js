@@ -26,20 +26,32 @@ document.addEventListener('keydown', e => {
 // ---------- Kinetic split-text ----------
 function splitLetters(el, autoplay){
   var out = [], i = 0;
-  Array.prototype.forEach.call(el.childNodes, function(node){
-    function pushChar(ch, cls){
+  function pushWord(text, cls){
+    var w = document.createElement('span');
+    w.className = 'word'; // unbreakable: lines may only break BETWEEN words
+    Array.prototype.forEach.call(text, function(ch){
       var s = document.createElement('span');
       s.className = 'ch' + (cls ? ' ' + cls : '');
-      s.textContent = (ch === ' ' || ch === '\u00A0') ? '\u00A0' : ch;
+      s.textContent = ch;
       s.style.setProperty('--i', i++);
-      out.push(s);
-    }
+      w.appendChild(s);
+    });
+    out.push(w);
+  }
+  function pushWords(text, cls){
+    text.split(/(\s+)/).forEach(function(part){
+      if(!part) return;
+      if(/^\s+$/.test(part)) out.push(document.createTextNode(' '));
+      else pushWord(part, cls);
+    });
+  }
+  Array.prototype.forEach.call(el.childNodes, function(node){
     if(node.nodeType === 3){
-      Array.prototype.forEach.call(node.textContent, function(ch){ pushChar(ch, ''); });
+      pushWords(node.textContent, '');
     }else if(node.nodeName === 'BR'){
       out.push(document.createElement('br'));
     }else if(node.classList && node.classList.contains('accent')){
-      Array.prototype.forEach.call(node.textContent, function(ch){ pushChar(ch, 'accent'); });
+      pushWords(node.textContent, 'accent');
     }else{
       out.push(node.cloneNode(true)); // e.g. the hero media chip: keep as-is
     }
