@@ -125,6 +125,7 @@ footer a{color:var(--accent)}
 
 /* kinetic split-text letters */
 .ch{display:inline-block;will-change:transform,opacity}
+.kinetic .word{display:inline-block;white-space:nowrap} /* never break inside a word */
 .kinetic .ch{opacity:0;transform:translateY(.55em) rotate(5deg);animation:chIn .65s cubic-bezier(.16,.8,.26,1) forwards;animation-play-state:paused;animation-delay:calc(var(--i,0)*26ms)}
 .kinetic.go .ch{animation-play-state:running}
 @keyframes chIn{to{opacity:1;transform:translateY(0) rotate(0)}}
